@@ -1,6 +1,7 @@
 package com.zumgu.config.module;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.zumgu.config.serializer.DateTimeSerializer;
 import org.joda.time.DateTime;
 
 /**
@@ -11,6 +12,5 @@ public class DateTimeModule extends SimpleModule {
     public DateTimeModule() {
         super();
         addSerializer(DateTime.class, new DateTimeSerializer());
-        addDeserializer(DateTime.class, new DateTimeDeserializer());
     }
 }

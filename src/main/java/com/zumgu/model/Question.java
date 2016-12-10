@@ -37,6 +37,7 @@ public class Question {
     // LocalDateTime
 
     @Convert(converter = LocalDateTimeConverter.class)
+    @JsonProperty
     private DateTime createDate = DateTime.now();
 
     @OneToMany(mappedBy="question")
